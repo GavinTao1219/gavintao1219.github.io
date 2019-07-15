@@ -347,9 +347,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>华为技术有限公司是一家中国的ICT（信息与通信）基础设施和智能终端提供商，我曾在华为的物联网部门下面的车联网项目群从事软件开发工作。主要负责华为车联网云平台的后端开发。</p>
-<p>我使用了Java及多种开源组件，负责华为车联网平台与南向车载设备之间交互业务的开发，实现了基于HTTP协议的Ecall消息上报、基于MQTT协议的车辆控制命令下发及响应上报、采集，保证了代码的单元测试覆盖率与功能稳定，并成功在欧洲上现网使用。</p>
-<h2 id="一、主要工作内容"><a href="#一、主要工作内容" class="headerlink" title="一、主要工作内容"></a>一、主要工作内容</h2><h3 id="1-基于HTTP的eCall消息上报"><a href="#1-基于HTTP的eCall消息上报" class="headerlink" title="1. 基于HTTP的eCall消息上报"></a>1. 基于HTTP的eCall消息上报</h3><p>eCall消息是欧盟倡议的，旨在为欧盟内任何地方发生碰撞的驾车者提供快速援助。</p>
+                <p>Huawei Technologies is a Chinese information and communications technology (ICT) solutions provider. I have worked as a software engineer at Huawei’s IoT (Internet of Things) department. I was responsible for building new features of the backend of Huawei’s Connected Vehicle Platform. </p>
+<p>I used Java and various open source software to implement various types of interaction between vehicles and Huawei’s Connected Vehicle Platform. I implemented the reporting of eCall message based on HTTP, and the Remote Control feature based on MQTT. These two features successfully released in Europe. </p>
+<h2 id="1-Job-Responsibility"><a href="#1-Job-Responsibility" class="headerlink" title="1. Job Responsibility"></a>1. Job Responsibility</h2><h3 id="1-1-Feature-Development-the-Reporting-of-eCall-Message-Based-on-HTTP"><a href="#1-1-Feature-Development-the-Reporting-of-eCall-Message-Based-on-HTTP" class="headerlink" title="1.1 Feature Development: the Reporting of eCall Message Based on HTTP"></a>1.1 Feature Development: the Reporting of eCall Message Based on HTTP</h3><p>eCall Message is advocated by European Union, in purpose of providing in-time assistance for any crashed vehicle in European Union. </p>
 <ul>
 <li>接收车载设备发送的HTTP POST请求，并对POST请求体中的16进制码流进行解码，实现了将码流解码为包含具体车辆求救信息的JSON结构体。</li>
 <li>作为Kafka生产者，将解码的消息推送到消息队列，供华为车联网平台的其他微服务组件消费后写入数据库、打点记录，并进行具体的业务处理。Kafka消息队列的运用保证了高并发时的稳定性。</li>
