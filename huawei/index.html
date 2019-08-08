@@ -351,10 +351,10 @@
 <p>I used Java and various open source software to implement various types of interaction between vehicles and Huawei’s Connected Vehicle Platform. I implemented the reporting of eCall message based on HTTP, and the Remote Control feature based on MQTT. These two features successfully released in Europe. </p>
 <h2 id="1-Job-Responsibility"><a href="#1-Job-Responsibility" class="headerlink" title="1. Job Responsibility"></a>1. Job Responsibility</h2><h3 id="1-1-Feature-Development-the-Reporting-of-eCall-Message-Based-on-HTTP"><a href="#1-1-Feature-Development-the-Reporting-of-eCall-Message-Based-on-HTTP" class="headerlink" title="1.1 Feature Development: the Reporting of eCall Message Based on HTTP"></a>1.1 Feature Development: the Reporting of eCall Message Based on HTTP</h3><p>eCall Message is advocated by European Union, in purpose of providing in-time assistance for any crashed vehicle in European Union. </p>
 <ul>
-<li>接收车载设备发送的HTTP POST请求，并对POST请求体中的16进制码流进行解码，实现了将码流解码为包含具体车辆求救信息的JSON结构体。</li>
-<li>作为Kafka生产者，将解码的消息推送到消息队列，供华为车联网平台的其他微服务组件消费后写入数据库、打点记录，并进行具体的业务处理。Kafka消息队列的运用保证了高并发时的稳定性。</li>
-<li>使用xml文件与正则表达式，适配了动态url的POST请求，实现了从url中动态读取所需参数。</li>
-<li>符合OSGi规范，实现了此功能注册为OSGi的声明式服务，可作为插件（Karaf中的bundle）进行热插拔式的安装、卸载。</li>
+<li>Receive HTTP POST requests sent by vehicles, and decode the hex message carried by the request body of HTTP POST. Implemented the feature of decoding hex message into Json object containing specific information of the vehicles. </li>
+<li>As a Kafka message producer, push the decoded message to the message queue, so that other elements of Huawei’s Connected Vehicle Platform could consume the message. The usage of Kafka message queue ensures the stability in high concurrency. </li>
+<li>Used xml files and regular expressions to adapt dynamic URLs of the POST requests, and implemented reading required parameters from URLs. </li>
+<li>Compliance with the specifications of OSGi, and implement the feature of reporting eCall Message as a declarative service, so that it could be installed, uninstalled or run as a hot swapping plug-in. </li>
 </ul>
 <h3 id="2-基于MQTT的车辆控制命令下发"><a href="#2-基于MQTT的车辆控制命令下发" class="headerlink" title="2. 基于MQTT的车辆控制命令下发"></a>2. 基于MQTT的车辆控制命令下发</h3><ul>
 <li>构建华为车联网平台与车载设备之间的MQTT协议通道，实现了华为车联网平台与车辆设备之间基于MQTT协议的双向通信，保证了糟糕网络环境下服务的稳定性。</li>
