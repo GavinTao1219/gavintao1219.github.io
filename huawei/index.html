@@ -354,7 +354,7 @@
 <li>Receive HTTP POST requests sent by vehicles, and decode the hex message carried by the request body of HTTP POST. Implemented the feature of decoding hex message into Json object containing specific information of the vehicles. </li>
 <li>As a Kafka message producer, push the decoded message to the message queue, so that other elements of Huawei’s Connected Vehicle Platform could consume the message. The usage of Kafka message queue ensures the stability in high concurrency. </li>
 <li>Used xml files and regular expressions to adapt dynamic URLs of the POST requests, and read parameters from URLs. </li>
-<li>OSGi Compliance: implement the feature of reporting eCall Message as a declarative service in OSGi, so that it could be installed, uninstalled or run as a hot swapping plug-in. </li>
+<li>Compliant with OSGi specification: implement the feature of reporting eCall Message as a declarative service in OSGi, so that it could be installed, uninstalled or run as a hot swapping plug-in. </li>
 </ul>
 <h3 id="2-基于MQTT的车辆控制命令下发"><a href="#2-基于MQTT的车辆控制命令下发" class="headerlink" title="2. 基于MQTT的车辆控制命令下发"></a>2. 基于MQTT的车辆控制命令下发</h3><ul>
 <li>构建华为车联网平台与车载设备之间的MQTT协议通道，实现了华为车联网平台与车辆设备之间基于MQTT协议的双向通信，保证了糟糕网络环境下服务的稳定性。</li>
